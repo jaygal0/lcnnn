@@ -9,16 +9,21 @@ const Btn = styled.button`
   border-radius: 0.5rem;
   margin-top: 2.4rem;
 
+  &.hotpink {
+    background-color: ${({ theme }) => theme.color.hotPink};
+    color: ${({ theme }) => theme.color.black};
+  }
+
   @media screen and (max-width: ${({ theme }) =>
       theme.breakPoint.phoneMedium}) {
     width: 100%;
   }
 `
 
-const ButtonMain = ({ btnLabel, link }) => {
+const ButtonMain = ({ btnLabel, link, btnPink }) => {
   return (
     <Link href={link}>
-      <Btn>{btnLabel}</Btn>
+      <Btn className={btnPink ? 'hotpink' : null}>{btnLabel}</Btn>
     </Link>
   )
 }

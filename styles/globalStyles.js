@@ -17,7 +17,6 @@ font-family: 'Open Sans', sans-serif;
 header {
   max-width: 144rem;
   height: min-content;
-  margin-top: 5.6rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.6rem;
@@ -28,6 +27,9 @@ header {
     column-gap: 1.6rem;
     margin: 0 1.6rem;
   }
+}
+nav {
+  margin: 5.6rem 0 8.8rem 0;
 }
 main {
   max-width: 144rem;
@@ -55,6 +57,7 @@ h1 {
   color: ${({ theme }) => theme.color.black};
   text-transform: capitalize;
   font-weight: 900;
+  margin-bottom: ${({ theme }) => theme.margin.small};
 
   @media screen and (max-width: ${({ theme }) =>
     theme.breakPoint.phoneMedium}) {
@@ -70,13 +73,12 @@ h2 {
   text-transform: capitalize;
   color: ${({ theme }) => theme.color.black};
   font-weight: 400;
-  margin-bottom: 1.6rem;
+  margin-bottom: ${({ theme }) => theme.margin.small};
   
   @media screen and (max-width: ${({ theme }) =>
     theme.breakPoint.phoneMedium}) {
   font-size: ${({ theme }) => theme.font.phone.h2};
   line-height: ${({ theme }) => theme.lineHeight.phone.h2};
-  margin-bottom: 1.6rem;
   }
 }
 
@@ -115,6 +117,7 @@ button {
   font-size: ${({ theme }) => theme.font.button};
   line-height: ${({ theme }) => theme.lineHeight.button};
   text-transform: capitalize;
+  border: none;
 }
 
 a {

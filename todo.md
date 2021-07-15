@@ -1,4 +1,3 @@
-TODO: Nav bar component
 TODO: Hero title component
 TODO: Search bar component
 TODO: All major platforms component

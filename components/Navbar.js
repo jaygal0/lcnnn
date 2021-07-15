@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
 import { SectionFlex } from '../styles'
@@ -23,8 +24,12 @@ const Navbar = () => {
       <LogoWrapper></LogoWrapper>
       <LinksWrapper>
         <ul>
-          <li>episodes</li>
-          <CTA>listen now</CTA>
+          <Link href="/">
+            <li>episodes</li>
+          </Link>
+          <Link href="/">
+            <CTA>listen now</CTA>
+          </Link>
         </ul>
       </LinksWrapper>
     </Nav>
