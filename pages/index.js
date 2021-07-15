@@ -22,8 +22,6 @@ export default function Home() {
           link="#"
         />
         <Search />
-        <Platforms />
-        <Episodes title="#1 lorem ipsum" position="lorem ipsum" />
         <ImageAndText
           title="inspired &amp; approved by derek sivers"
           body="Creator of NowNowNow.com, Derek sits down and joins the podcast."
@@ -32,6 +30,8 @@ export default function Home() {
           link="#"
           src="/profile.jpg"
         />
+        <Platforms />
+        <Episodes title="#1 lorem ipsum" position="lorem ipsum" />
         <ImageAndText
           title="inspired &amp; approved by derek sivers"
           body="Creator of NowNowNow.com, Derek sits down and joins the podcast."

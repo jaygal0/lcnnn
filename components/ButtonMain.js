@@ -14,16 +14,21 @@ const Btn = styled.button`
     color: ${({ theme }) => theme.color.black};
   }
 
+  &.no-margin {
+    margin-top: 0;
+  }
   @media screen and (max-width: ${({ theme }) =>
       theme.breakPoint.phoneMedium}) {
     width: 100%;
   }
 `
 
-const ButtonMain = ({ btnLabel, link, btnPink }) => {
+const ButtonMain = ({ btnLabel, link, btnPink, noMargin }) => {
   return (
     <Link href={link}>
-      <Btn className={btnPink ? 'hotpink' : null}>{btnLabel}</Btn>
+      <Btn className={btnPink ? 'hotpink' : noMargin ? 'no-margin' : null}>
+        {btnLabel}
+      </Btn>
     </Link>
   )
 }
