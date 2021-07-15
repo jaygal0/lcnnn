@@ -7,6 +7,7 @@ export const SectionGrid = styled.section`
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(2, min-content);
   column-gap: 1.6rem;
+  margin-bottom: ${({ theme }) => theme.verticleRythmn.desktop};
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakPoint.phoneMedium}) {

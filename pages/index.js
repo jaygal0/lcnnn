@@ -2,6 +2,7 @@ import Hero from '../components/Hero'
 import ImageAndText from '../components/ImageAndText'
 import Meta from '../components/Meta'
 import Navbar from '../components/Navbar'
+import Search from '../components/Search'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           btnPink={true}
           link="#"
         />
+        <Search />
         <ImageAndText
           title="inspired &amp; approved by derek sivers"
           body="Creator of NowNowNow.com, Derek sits down and joins the podcast."

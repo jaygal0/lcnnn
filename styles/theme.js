@@ -1,27 +1,28 @@
 // General fonts
-const subtitle = 3.2;
-const body = 1.6;
-const meta = 1.2;
-const button = 1.6;
+const subtitle = 3.2
+const body = 1.6
+const meta = 1.2
+const button = 1.6
 
 // Place desktop font-size here
-const deskH1 = 9.6;
-const deskH2 = 3.2;
-const deskH3 = 2.4;
-const deskH4 = 1.6;
+const deskH1 = 9.6
+const deskH2 = 3.2
+const deskH3 = 2.4
+const deskH4 = 1.6
 
 // Place phone font-size here
-const phoneH1 = 5.6;
-const phoneH2 = 3.2;
-const phoneH3 = 2.4;
-const phoneH4 = 1.6;
+const phoneH1 = 5.6
+const phoneH2 = 3.2
+const phoneH3 = 2.4
+const phoneH4 = 1.6
 
 export default {
   color: {
-    brown: '#EC9487',
-    blue: '#315D7E',
-    hotPink: '#D56FA6',
     black: '#0E0E2C',
+    blue: '#315D7E',
+    brown: '#EC9487',
+    grey: '#F0F5F9',
+    hotPink: '#D56FA6',
     offWhite: '#FFF9ED',
     white: '#FFFFFF',
   },
@@ -85,4 +86,4 @@ export default {
     phoneMedium: '376px',
     phoneSmall: '321px',
   },
-};
+}
