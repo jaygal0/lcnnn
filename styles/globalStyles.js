@@ -101,6 +101,7 @@ h4 {
   font-family: 'Archivo Black', sans-serif;
   font-size: ${({ theme }) => theme.font.desktop.h4};
   line-height: ${({ theme }) => theme.lineHeight.desktop.h4};
+  margin-bottom: ${({ theme }) => theme.margin.small};
   margin-bottom: 1.6rem;
   color: ${({ theme }) => theme.color.black};
   font-weight: 700;
@@ -110,6 +111,7 @@ h4 {
 p {
   font-size: ${({ theme }) => theme.font.body};
   line-height: ${({ theme }) => theme.lineHeight.body};
+  margin-bottom: ${({ theme }) => theme.margin.small};
 }
 
 button {
@@ -169,6 +171,45 @@ text-transform: capitalize;
 }
 li:not(:last-child){
   margin-right: 8rem;
+}
+
+// CSS FOR AUDIO PLAYER 
+// Background
+.rhap_container {
+  background: ${({ theme }) => theme.color.blue};
+  border-radius: ${({ theme }) => theme.borderRadius.small};
+}
+// Remove additional controls
+.rhap_additional-controls {
+  display: none;
+}
+// Play button 
+.rhap_play-pause-button {
+  color: ${({ theme }) => theme.color.grey};
+}
+// Volume button 
+.rhap_volume-button {
+  color: ${({ theme }) => theme.color.grey};
+}
+// Circle play indicator
+.rhap_progress-indicator {
+  background-color: ${({ theme }) => theme.color.hotPink};
+}
+.rhap_volume-indicator {
+  background-color: ${({ theme }) => theme.color.hotPink};
+}
+.rhap_progress-filled {
+  background-color: ${({ theme }) => theme.color.hotPink};
+}
+.rhap_progress-bar-show-download {
+  background-color: ${({ theme }) => theme.color.grey};
+}
+.rhap_total-time {
+  display: none;
+}
+.rhap_current-time {
+  color: ${({ theme }) => theme.color.white};
+  margin-left: 1.6rem;
 }
 `
 

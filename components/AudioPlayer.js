@@ -11,6 +11,7 @@ const AudioWrapper = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.small};
   padding: 3.2rem;
   align-items: center;
+  margin-bottom: 8rem;
 `
 const ImageWrapper = styled.div`
   position: relative;
