@@ -15,3 +15,12 @@ export const SectionGrid = styled.section`
     margin: 0 1.6rem;
   }
 `
+export const SectionFlex = styled.section`
+  grid-column: 2 / span 10;
+  height: min-content;
+  display: flex;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakPoint.phoneMedium}) {
+  }
+`

@@ -1,11 +1,14 @@
 import ImageAndText from '../components/ImageAndText'
 import Meta from '../components/Meta'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
     <>
       <Meta />
-      <header></header>
+      <header>
+        <Navbar />
+      </header>
       <main>
         <ImageAndText
           title="inspired &amp; approved by derek sivers"

@@ -15,6 +15,19 @@ font-family: 'Open Sans', sans-serif;
 }
 
 header {
+  max-width: 144rem;
+  height: min-content;
+  margin-top: 5.6rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.6rem;
+
+  @media screen and (max-width: ${({ theme }) =>
+    theme.breakPoint.phoneMedium}) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.6rem;
+    margin: 0 1.6rem;
+  }
 }
 main {
   max-width: 144rem;
@@ -136,15 +149,23 @@ blockquote p {
 }
 
 ul {
-  margin-bottom: 3.2rem;
+  display: flex;
+  align-items: center;
 }
 
-ul li {
+li {
 font-size: ${({ theme }) => theme.font.body};
 line-height: ${({ theme }) => theme.lineHeight.body};
+list-style: none;
+font-family: 'Archivo Black', sans-serif;
+text-transform: capitalize;
+
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     list-style: none;
       }
+}
+li:not(:last-child){
+  margin-right: 8rem;
 }
 `
 
