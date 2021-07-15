@@ -1,35 +1,40 @@
+// General fonts
+const subtitle = 3.2;
+const body = 1.6;
+const meta = 1.2;
+const button = 1.6;
+
 // Place desktop font-size here
-const deskH1 = 7.2
-const deskH2 = 4
-const deskH3 = 2.4
-const deskH4 = 2.4
-const body = 1.6
-const meta = 5
+const deskH1 = 9.6;
+const deskH2 = 3.2;
+const deskH3 = 2.4;
+const deskH4 = 1.6;
 
 // Place phone font-size here
-const phoneH1 = 6.4
-const phoneH2 = 4
-const phoneH3 = 2.4
-const phoneH4 = 2.4
+const phoneH1 = 5.6;
+const phoneH2 = 3.2;
+const phoneH3 = 2.4;
+const phoneH4 = 1.6;
 
 export default {
   color: {
-    yellow: '#EAED45',
-    orange: '#ED8B45',
-    lightGreen: '#68C4B8',
-    black: '#1C1C1C',
+    brown: '#EC9487',
+    blue: '#315D7E',
+    hotPink: '#D56FA6',
+    black: '#0E0E2C',
+    offWhite: '#FFF9ED',
     white: '#FFFFFF',
-    grey: '#F5F5F5',
-    line: '#E5E5E5',
   },
   font: {
+    body: `${body}rem`,
+    subtitle: `${subtitle}rem`,
+    meta: `${meta}rem`,
+    button: `${button}rem`,
     desktop: {
       h1: `${deskH1}rem`,
       h2: `${deskH2}rem`,
       h3: `${deskH3}rem`,
       h4: `${deskH4}rem`,
-      p: `${body}rem`,
-      meta: `${meta}rem`,
     },
     phone: {
       h1: `${phoneH1}rem`,
@@ -39,13 +44,15 @@ export default {
     },
   },
   lineHeight: {
+    body: `${body + 0.8}rem`,
+    subtitle: `${subtitle + 0.8}rem`,
+    meta: `${meta + 0.8}rem`,
+    button: `${button + 0.8}rem`,
     desktop: {
       h1: `${deskH1 + 0.8}rem`,
       h2: `${deskH2 + 0.8}rem`,
       h3: `${deskH3 + 0.8}rem`,
       h4: `${deskH4 + 0.8}rem`,
-      p: `${body + 0.8}rem`,
-      meta: `${meta + 0.4}rem`,
     },
     phone: {
       h1: `${phoneH1 + 0.8}rem`,
@@ -59,11 +66,16 @@ export default {
   },
   transition: {},
   margin: {
-      large: '6.4rem',
-      medium: '3.2rem',
-      small: '1.6rem',
-    },
-  borderRadius: '1.6rem',
+    large: '6.4rem',
+    medium: '3.2rem',
+    small: '1.6rem',
+  },
+  verticleRythmn: {
+    desktop: '12.8rem',
+    tablet: '9.6rem',
+    phone: '9.6rem',
+  },
+  borderRadius: '.5rem',
   breakPoint: {
     desktop4K: '2561px',
     desktopLarge: '1441px',
@@ -73,4 +85,4 @@ export default {
     phoneMedium: '376px',
     phoneSmall: '321px',
   },
-}
+};

@@ -1,13 +1,17 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-export const Container = styled.div`
-  margin: 3.2rem auto;
-  margin-bottom: 9.6rem;
-  max-width: 128rem;
-  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    margin-bottom: 4.8rem;
-  }
-  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+export const SectionGrid = styled.section`
+  grid-column: 2 / span 10;
+  height: min-content;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  column-gap: 1.6rem;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakPoint.phoneMedium}) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.6rem;
+    margin: 0 1.6rem;
   }
 `
-
