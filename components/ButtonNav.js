@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Btn = styled.button`
   background-color: ${({ theme }) => theme.color.blue};
   padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
+  border-radius: ${({ theme }) => theme.borderRadius.small};
   text-transform: uppercase;
 
   @media screen and (max-width: ${({ theme }) =>

@@ -6,7 +6,7 @@ const Btn = styled.button`
   background-color: ${({ theme }) => theme.color.blue};
   color: ${({ theme }) => theme.color.white};
   padding: 1.6rem;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.borderRadius.small};
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.font.desktop.h2};
   height: max-content;

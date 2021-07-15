@@ -17,11 +17,18 @@ export const SectionGrid = styled.section`
   }
 `
 export const SectionFlex = styled.section`
-  grid-column: 2 / span 10;
+  grid-column: 3 / span 8;
   height: min-content;
   display: flex;
+  flex-direction: column;
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakPoint.phoneMedium}) {
   }
+`
+
+export const Heading = styled.h2`
+  grid-column: 2 / -1;
+  grid-row: 1;
+  margin-bottom: ${({ theme }) => theme.margin.medium};
 `

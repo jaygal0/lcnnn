@@ -23,6 +23,7 @@ export default {
     brown: '#EC9487',
     grey: '#F0F5F9',
     hotPink: '#D56FA6',
+    pink: '#FEE4E1',
     offWhite: '#FFF9ED',
     white: '#FFFFFF',
   },
@@ -76,7 +77,11 @@ export default {
     tablet: '9.6rem',
     phone: '9.6rem',
   },
-  borderRadius: '.5rem',
+  borderRadius: {
+    large: '6.4rem',
+    medium: '1.6rem',
+    small: '.5rem',
+  },
   breakPoint: {
     desktop4K: '2561px',
     desktopLarge: '1441px',

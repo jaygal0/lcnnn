@@ -1,7 +1,9 @@
+import Episodes from '../components/episodes'
 import Hero from '../components/Hero'
 import ImageAndText from '../components/ImageAndText'
 import Meta from '../components/Meta'
 import Navbar from '../components/Navbar'
+import Platforms from '../components/Platforms'
 import Search from '../components/Search'
 
 export default function Home() {
@@ -20,6 +22,8 @@ export default function Home() {
           link="#"
         />
         <Search />
+        <Platforms />
+        <Episodes title="#1 lorem ipsum" position="lorem ipsum" />
         <ImageAndText
           title="inspired &amp; approved by derek sivers"
           body="Creator of NowNowNow.com, Derek sits down and joins the podcast."

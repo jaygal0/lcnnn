@@ -6,7 +6,7 @@ const Btn = styled.button`
   background-color: ${({ theme }) => theme.color.blue};
   color: ${({ theme }) => theme.color.white};
   padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
+  border-radius: ${({ theme }) => theme.borderRadius.small};
   margin-top: 2.4rem;
 
   &.hotpink {
