@@ -1,5 +1,3 @@
-TODO: Episodes page
-TODO: Detail page
-TODO: Responsive design
 TODO: Backend
+TODO: Responsive design
 TODO: Logo design

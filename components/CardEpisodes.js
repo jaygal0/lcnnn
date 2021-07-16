@@ -1,10 +1,15 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
 
 const CardWrapper = styled.div`
   display: flex;
   align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const ImageWrapper = styled.div`
@@ -33,17 +38,19 @@ const Subtitle = styled.p`
 
 const CardEpisodes = ({ title, subtitle, release, body }) => {
   return (
-    <CardWrapper>
-      <ImageWrapper>
-        <Image src="/card.jpg" layout="fill" objectFit="cover" />
-      </ImageWrapper>
-      <TextWrapper>
-        <Release>{release}</Release>
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-        <p>{body}</p>
-      </TextWrapper>
-    </CardWrapper>
+    <Link href="/detail/detail">
+      <CardWrapper>
+        <ImageWrapper>
+          <Image src="/card.jpg" layout="fill" objectFit="cover" />
+        </ImageWrapper>
+        <TextWrapper>
+          <Release>{release}</Release>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+          <p>{body}</p>
+        </TextWrapper>
+      </CardWrapper>
+    </Link>
   )
 }
 

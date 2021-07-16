@@ -8,8 +8,17 @@ const Nav = styled.nav`
   height: min-content;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
-const LogoWrapper = styled.div``
+const LogoWrapper = styled.div`
+  width: 96px;
+  height: 96px;
+  background: ${({ theme }) => theme.color.hotPink};
+
+  &:hover {
+    cursor: pointer;
+  }
+`
 const LinksWrapper = styled.div``
 const CTA = styled.li`
   padding: 0.8rem 1.6rem;
@@ -28,7 +37,9 @@ const Navbar = () => {
   const router = useRouter()
   return (
     <Nav>
-      <LogoWrapper></LogoWrapper>
+      <Link href="/">
+        <LogoWrapper></LogoWrapper>
+      </Link>
       <LinksWrapper>
         <ul>
           <Link href="/episodes">
