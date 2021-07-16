@@ -27,6 +27,7 @@ const ImageAndText = ({
   btnLabelNo,
   link,
   src,
+  subheading,
 }) => {
   return (
     <SectionGrid>
@@ -39,7 +40,13 @@ const ImageAndText = ({
         <Image src={src} layout="fill" objectFit="cover" />
       </ImageWrapper>
       <TextWrapper>
-        <TextAndBtn title={title} body={body} btnLabel={btnLabel} link={link} />
+        <TextAndBtn
+          title={title}
+          body={body}
+          btnLabel={btnLabel}
+          link={link}
+          subheading={subheading}
+        />
       </TextWrapper>
     </SectionGrid>
   )

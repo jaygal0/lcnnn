@@ -23,6 +23,12 @@ export const SectionFlex = styled.section`
   flex-direction: column;
   margin-bottom: ${({ theme }) => theme.verticleRythmn.desktop};
 
+  &.footer {
+    grid-column: 2 / span 10;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   @media screen and (max-width: ${({ theme }) =>
       theme.breakPoint.phoneMedium}) {
   }

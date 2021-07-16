@@ -48,6 +48,11 @@ main {
 }
 footer {
   max-width: 144rem;
+  height: min-content;
+  margin: 0 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.6rem;
 }
 
 h1 {
@@ -89,6 +94,7 @@ h3 {
     color: ${({ theme }) => theme.color.black};
     text-transform: capitalize;
     font-weight: 900;
+  margin-bottom: ${({ theme }) => theme.margin.small};
 
   @media screen and (max-width: ${({ theme }) =>
     theme.breakPoint.phoneMedium}) {
@@ -123,23 +129,13 @@ button {
 }
 
 a {
-  color: ${({ theme }) => theme.color.hotPink};
-  text-decoration: none;
-  &:hover {
   color: ${({ theme }) => theme.color.black};
-  }
-}
+  text-decoration: underline;
 
-input {
-  font-size: ${({ theme }) => theme.font.desktop.p};
-  border-radius: 3.2rem;
-  outline:none;
-  border: none;
-  padding: .8rem 2.4rem;
-  width: 100%;
-::-webkit-input-placeholder {
-  color: black;
-  opacity: .7;
+  &:hover {
+  color: ${({ theme }) => theme.color.hotPink};
+  transition: ${({ theme }) => theme.transition.fast};
+  cursor: pointer;
   }
 }
 
@@ -171,6 +167,56 @@ text-transform: capitalize;
 }
 li:not(:last-child){
   margin-right: 8rem;
+}
+// FORMS
+label {
+font-size: ${({ theme }) => theme.font.body};
+line-height: ${({ theme }) => theme.lineHeight.body};
+font-weight: bold;
+text-transform: capitalize;
+margin-bottom: ${({ theme }) => theme.margin.small};
+}
+
+input {
+  margin-bottom: ${({ theme }) => theme.margin.medium};
+  background-color: ${({ theme }) => theme.color.offWhite};
+  padding: .8rem;
+  width: 100%;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid ${({ theme }) => theme.color.black};
+
+::-webkit-input-placeholder {
+  color: black;
+  opacity: .3;
+  }
+  
+  &:focus {
+  border-bottom: 1px solid ${({ theme }) => theme.color.hotPink};
+  transition: ${({ theme }) => theme.transition.fast}
+  }
+}
+
+textarea {
+  font-family: 'Open Sans', sans-serif;
+  background-color: ${({ theme }) => theme.color.offWhite};
+  padding: .8rem;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid ${({ theme }) => theme.color.black};
+  margin-bottom: ${({ theme }) => theme.margin.medium};
+  resize: none;
+
+::-webkit-input-placeholder {
+  color: black;
+  opacity: .3;
+  font-family: 'Open Sans', sans-serif;
+  }
+  
+  &:focus {
+  border-bottom: 1px solid ${({ theme }) => theme.color.hotPink};
+  transition: ${({ theme }) => theme.transition.fast}
+  }
 }
 
 // CSS FOR AUDIO PLAYER 

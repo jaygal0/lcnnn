@@ -66,7 +66,9 @@ export default {
   letterSpacing: {
     p: '0.05rem',
   },
-  transition: {},
+  transition: {
+    fast: 'all .3s ease',
+  },
   margin: {
     large: '6.4rem',
     medium: '3.2rem',

@@ -1,4 +1,6 @@
 import Episodes from '../components/episodes'
+import Footer from '../components/Footer'
+import Form from '../components/Form'
 import Hero from '../components/Hero'
 import ImageAndText from '../components/ImageAndText'
 import Meta from '../components/Meta'
@@ -39,9 +41,13 @@ export default function Home() {
           btnLabelNo="#2"
           link="#"
           src="/profile.jpg"
+          subheading="joshua galinato"
         />
+        <Form />
       </main>
-      <footer></footer>
+      <footer>
+        <Footer footer />
+      </footer>
     </>
   )
 }
