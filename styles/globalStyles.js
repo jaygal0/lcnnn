@@ -8,10 +8,14 @@ const GlobalStyle = createGlobalStyle`
 }
 html,
 body {
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 62.5%;
   font-weight: 400;
   letter-spacing: 0.05rem;
+  background-color: ${({ theme }) => theme.color.offWhite};
+  background-image: url(blob-1.svg), url(blob-2.svg);
+  background-position: 100% 40vw, 100% 246vw;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -217,6 +221,18 @@ textarea {
   border-bottom: 1px solid ${({ theme }) => theme.color.hotPink};
   transition: ${({ theme }) => theme.transition.fast}
   }
+}
+
+// BACKGROUND SVG'S
+.blob-1 {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.blob-2 {
+  position: absolute;
+  z-index: -1;
 }
 
 // CSS FOR AUDIO PLAYER 

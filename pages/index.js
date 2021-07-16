@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Episodes from '../components/episodes'
 import Footer from '../components/Footer'
 import Form from '../components/Form'
