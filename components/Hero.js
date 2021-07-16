@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ButtonMain from './ButtonMain'
+import Newsletter from './Newsletter'
 
 const Container = styled.div`
   grid-column: 3 / span 8;
@@ -17,8 +18,7 @@ const Hero = ({ title, subtitle, btnLabel, btnPink, link, newsletter }) => {
       <h1>{title}</h1>
       <Subtitle>{subtitle}</Subtitle>
       {newsletter ? (
-        // FIXME: Add newsletter component here. Do this after the home page is done
-        <div></div>
+        <Newsletter />
       ) : (
         <ButtonMain btnLabel={btnLabel} link={link} btnPink={btnPink} />
       )}

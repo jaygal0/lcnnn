@@ -16,6 +16,12 @@ const ImageWrapper = styled.div`
   padding-bottom: 18%;
   border-radius: ${({ theme }) => theme.borderRadius.medium};
   overflow: hidden;
+
+  &:hover {
+    filter: brightness(105%);
+    cursor: pointer;
+    transition: ${({ theme }) => theme.transition.fast};
+  }
 `
 
 const Platforms = () => {

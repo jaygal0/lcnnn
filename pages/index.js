@@ -36,13 +36,13 @@ export default function Home() {
         <Platforms />
         <Episodes title="#1 lorem ipsum" position="lorem ipsum" />
         <ImageAndText
-          title="inspired &amp; approved by derek sivers"
-          body="Creator of NowNowNow.com, Derek sits down and joins the podcast."
-          btnLabel="listen now"
+          title="host &amp; creator"
+          subheading="joshua galinato"
+          body="I enjoy conversations and going through peoples /now page, so I built this site to kill two birds with one stone."
+          btnLabel="what i'm doing now"
           btnLabelNo="#2"
           link="#"
           src="/profile.jpg"
-          subheading="joshua galinato"
         />
         <Form />
       </main>

@@ -24,6 +24,12 @@ const Btn = styled.button`
   color: ${({ theme }) => theme.color.white};
   padding: 0.8rem 1.6rem;
   border-radius: ${({ theme }) => theme.borderRadius.small};
+
+  &:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+    transition: ${({ theme }) => theme.transition.fast};
+  }
 `
 
 const Form = () => {
@@ -60,7 +66,7 @@ const Form = () => {
         <textarea
           name="message"
           placeholder="What's on your mind?"
-          rows={15}
+          rows={7}
         ></textarea>
         <Btn type="submit">submit</Btn>
       </FormContainer>

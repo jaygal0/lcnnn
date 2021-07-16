@@ -12,6 +12,12 @@ const Btn = styled.button`
   height: max-content;
   margin-top: 1.6rem;
 
+  &:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+    transition: ${({ theme }) => theme.transition.fast};
+  }
+
   &.placed-side {
     grid-column: 1 / span 1;
   }

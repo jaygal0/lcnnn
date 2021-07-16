@@ -14,7 +14,7 @@ body {
   letter-spacing: 0.05rem;
   background-color: ${({ theme }) => theme.color.offWhite};
   background-image: url(blob-1.svg), url(blob-2.svg);
-  background-position: 100% 40vw, 100% 246vw;
+  background-position: 100% 40vw, 100% 232vw;
   background-repeat: no-repeat;
 }
 
@@ -164,6 +164,19 @@ line-height: ${({ theme }) => theme.lineHeight.body};
 list-style: none;
 font-family: 'Archivo Black', sans-serif;
 text-transform: capitalize;
+
+&.nav {
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+&.active {
+    text-decoration: none;
+    border-bottom: ${({ theme }) => theme.color.hotPink} solid 4px;
+    padding-bottom: 4px;
+}
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     list-style: none;

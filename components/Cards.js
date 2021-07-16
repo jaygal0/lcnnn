@@ -6,6 +6,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: calc(100% / 4.5);
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 const ImageWrapper = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius};

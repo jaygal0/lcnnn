@@ -9,9 +9,21 @@ const Btn = styled.button`
   border-radius: ${({ theme }) => theme.borderRadius.small};
   margin-top: 2.4rem;
 
+  &:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+    transition: ${({ theme }) => theme.transition.fast};
+  }
+
   &.hotpink {
     background-color: ${({ theme }) => theme.color.hotPink};
     color: ${({ theme }) => theme.color.black};
+
+    &:hover {
+      filter: brightness(110%);
+      cursor: pointer;
+      transition: ${({ theme }) => theme.transition.fast};
+    }
   }
 
   &.no-margin {

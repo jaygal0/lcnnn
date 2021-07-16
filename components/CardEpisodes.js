@@ -1,0 +1,50 @@
+import Image from 'next/image'
+import React from 'react'
+import styled from 'styled-components'
+
+const CardWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const ImageWrapper = styled.div`
+  border-radius: ${({ theme }) => theme.borderRadius.small};
+  position: relative;
+  padding-bottom: 25%;
+  margin-bottom: ${({ theme }) => theme.margin.medium};
+  flex-grow: 1;
+  overflow: hidden;
+`
+const TextWrapper = styled.div`
+  flex-grow: 2;
+  margin-left: ${({ theme }) => theme.margin.medium};
+`
+const Release = styled.p`
+  margin-bottom: 0.8rem;
+`
+const Title = styled.h3`
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+`
+const Subtitle = styled.p`
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+`
+
+const CardEpisodes = ({ title, subtitle, release, body }) => {
+  return (
+    <CardWrapper>
+      <ImageWrapper>
+        <Image src="/card.jpg" layout="fill" objectFit="cover" />
+      </ImageWrapper>
+      <TextWrapper>
+        <Release>{release}</Release>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+        <p>{body}</p>
+      </TextWrapper>
+    </CardWrapper>
+  )
+}
+
+export default CardEpisodes
