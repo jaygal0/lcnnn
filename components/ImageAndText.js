@@ -12,11 +12,11 @@ const TextWrapper = styled.div`
 `
 const ImageWrapper = styled.div`
   grid-column: 2 / span 4;
-  position: relative;
   grid-row: 1;
-  background: red;
   border-radius: ${({ theme }) => theme.borderRadius};
+  position: relative;
   padding-bottom: 100%;
+  background: red;
 `
 
 const ImageAndText = ({

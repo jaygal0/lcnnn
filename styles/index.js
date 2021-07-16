@@ -21,6 +21,7 @@ export const SectionFlex = styled.section`
   height: min-content;
   display: flex;
   flex-direction: column;
+  margin-bottom: ${({ theme }) => theme.verticleRythmn.desktop};
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakPoint.phoneMedium}) {
