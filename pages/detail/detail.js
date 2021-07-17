@@ -4,9 +4,9 @@ import Footer from '../../components/Footer'
 import Hero from '../../components/Hero'
 import Meta from '../../components/Meta'
 import Navbar from '../../components/Navbar'
-import Newsletter from '../../components/Newsletter'
 import Platforms from '../../components/Platforms'
 import { SectionFlex } from '../../styles'
+import data from '../../data/episodeList'
 
 const ListWrapper = styled.ul`
   display: flex;
@@ -31,12 +31,17 @@ export default function Home() {
       </header>
       <main>
         <Hero
-          title="first surname"
+          title={`#${data}`}
           subtitle="subscribe to the newsletter for more episodes"
           newsletter
         />
         <SectionFlex>
-          <AudioPlayer title="#1 first name" position="position" />
+          <AudioPlayer
+            title="#1 first name"
+            position="position"
+            src="/card.jpg"
+            // FIXME: Make this dynamic
+          />
           <Platforms />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quod

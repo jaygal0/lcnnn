@@ -20,15 +20,19 @@ const ImageWrapper = styled.div`
 `
 const Title = styled.p`
   font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 0.8rem;
 `
-const Subtitle = styled.p``
+const Subtitle = styled.p`
+  text-transform: capitalize;
+`
 
-const Cards = ({ image, title, subtitle }) => {
+const Cards = ({ title, subtitle, src }) => {
   // FIXME: Figure this out. How to set this up properly.
   return (
     <Wrapper>
       <ImageWrapper>
-        <Image src="/card.jpg" layout="fill" objectFit="cover" />
+        <Image src={src} layout="fill" objectFit="cover" />
       </ImageWrapper>
       <Title>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>

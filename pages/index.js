@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Episodes from '../components/episodes'
 import Footer from '../components/Footer'
 import Form from '../components/Form'
@@ -8,6 +7,7 @@ import Meta from '../components/Meta'
 import Navbar from '../components/Navbar'
 import Platforms from '../components/Platforms'
 import Search from '../components/Search'
+import data from '../data/episodeList'
 
 export default function Home() {
   return (
@@ -34,7 +34,7 @@ export default function Home() {
           src="/profile.jpg"
         />
         <Platforms />
-        <Episodes title="#1 lorem ipsum" position="lorem ipsum" />
+        <Episodes />
         <ImageAndText
           title="host &amp; creator"
           subheading="joshua galinato"

@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, SectionFlex } from '../styles'
+import { SectionFlex } from '../styles'
 import AudioPlayer from './AudioPlayer'
 import ButtonMain from './ButtonMain'
 import Cards from './Cards'
+import data from '../data/episodeList'
 
 const PopularEpisodesWrapper = styled.div`
   display: flex;
@@ -17,24 +18,32 @@ const CardWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-const Episodes = ({ title, position }) => {
+const Episodes = () => {
   return (
     <SectionFlex>
       <h2>latest episodes</h2>
-      <AudioPlayer title={title} position={position} />
+      <AudioPlayer
+        title={`#${data[0].number} ${data[0].firstName} ${data[0].surname}`}
+        position={data[0].proffession}
+        src={data[0].src}
+      />
       <PopularEpisodesWrapper>
         <h2>popular episodes</h2>
         <ButtonMain btnLabel="view all" link="#" noMargin={true} />
       </PopularEpisodesWrapper>
       <CardWrapper>
-        <Cards title="heading" subtitle="subheading" />
-        <Cards title="heading" subtitle="subheading" />
-        <Cards title="heading" subtitle="subheading" />
-        <Cards title="heading" subtitle="subheading" />
-        <Cards title="heading" subtitle="subheading" />
-        <Cards title="heading" subtitle="subheading" />
-        <Cards title="heading" subtitle="subheading" />
-        <Cards title="heading" subtitle="subheading" />
+        {data.map((item) => {
+          const { number, firstName, surname, profession, src } = item
+          return (
+            <Cards
+              title={`#${number} ${firstName} ${surname}`}
+              subtitle={profession}
+              src={src}
+              // FIXME: Add url link as well
+              // FIXME: Add unique key UUID thingy
+            />
+          )
+        })}
       </CardWrapper>
     </SectionFlex>
   )

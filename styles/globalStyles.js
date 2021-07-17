@@ -13,9 +13,9 @@ body {
   font-weight: 400;
   letter-spacing: 0.05rem;
   background-color: ${({ theme }) => theme.color.offWhite};
-  background-image: url(blob-1.svg), url(blob-2.svg);
-  background-position: 100% 40vw, 100% 232vw;
-  background-repeat: no-repeat;
+  /* background-image: url(blob-1.svg), url(blob-2.svg); */
+  /* background-position: 100% 40vw, 100% 232vw; */
+  /* background-repeat: no-repeat; */
 }
 
 header {

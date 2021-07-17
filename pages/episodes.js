@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import Meta from '../components/Meta'
 import Navbar from '../components/Navbar'
 import { SectionFlex } from '../styles'
+import data from '../data/episodeList'
 
 export default function Home() {
   return (
@@ -19,48 +20,26 @@ export default function Home() {
           newsletter
         />
         <SectionFlex>
-          <CardEpisodes
-            title="#1 lorem ipsum"
-            subtitle="ux/ui designer"
-            release="01/01/21"
-            body="lorem ipsum hela sallei"
-          />
-          <CardEpisodes
-            title="#1 lorem ipsum"
-            subtitle="ux/ui designer"
-            release="01/01/21"
-            body="lorem ipsum hela sallei"
-          />
-          <CardEpisodes
-            title="#1 lorem ipsum"
-            subtitle="ux/ui designer"
-            release="01/01/21"
-            body="lorem ipsum hela sallei"
-          />{' '}
-          <CardEpisodes
-            title="#1 lorem ipsum"
-            subtitle="ux/ui designer"
-            release="01/01/21"
-            body="lorem ipsum hela sallei"
-          />{' '}
-          <CardEpisodes
-            title="#1 lorem ipsum"
-            subtitle="ux/ui designer"
-            release="01/01/21"
-            body="lorem ipsum hela sallei"
-          />{' '}
-          <CardEpisodes
-            title="#1 lorem ipsum"
-            subtitle="ux/ui designer"
-            release="01/01/21"
-            body="lorem ipsum hela sallei"
-          />{' '}
-          <CardEpisodes
-            title="#1 lorem ipsum"
-            subtitle="ux/ui designer"
-            release="01/01/21"
-            body="lorem ipsum hela sallei"
-          />
+          {data.map((item) => {
+            const {
+              number,
+              firstName,
+              surname,
+              profession,
+              src,
+              uploadDate,
+              body,
+            } = item
+            return (
+              <CardEpisodes
+                title={`#${number} ${firstName} ${surname}`}
+                subtitle={profession}
+                src={src}
+                release={uploadDate}
+                body={body}
+              />
+            )
+          })}
         </SectionFlex>
       </main>
       <footer>

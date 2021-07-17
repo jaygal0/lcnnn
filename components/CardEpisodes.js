@@ -16,6 +16,7 @@ const ImageWrapper = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.small};
   position: relative;
   padding-bottom: 25%;
+  width: 70%;
   margin-bottom: ${({ theme }) => theme.margin.medium};
   flex-grow: 1;
   overflow: hidden;
@@ -36,12 +37,12 @@ const Subtitle = styled.p`
   margin-bottom: 0.8rem;
 `
 
-const CardEpisodes = ({ title, subtitle, release, body }) => {
+const CardEpisodes = ({ title, subtitle, release, body, src }) => {
   return (
     <Link href="/detail/detail">
       <CardWrapper>
         <ImageWrapper>
-          <Image src="/card.jpg" layout="fill" objectFit="cover" />
+          <Image src={src} layout="fill" objectFit="cover" />
         </ImageWrapper>
         <TextWrapper>
           <Release>{release}</Release>

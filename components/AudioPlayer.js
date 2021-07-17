@@ -29,11 +29,11 @@ const Position = styled.p`
   margin-bottom: ${({ theme }) => theme.margin.small};
 `
 
-const AudioPlayer = ({ title, position }) => {
+const AudioPlayer = ({ title, position, src }) => {
   return (
     <AudioWrapper>
       <ImageWrapper>
-        <Image src="/image.jpg" layout="fill" objectFit="cover" />
+        <Image src={src} layout="fill" objectFit="cover" />
       </ImageWrapper>
       <ContentWrapper>
         <h3>{title}</h3>
