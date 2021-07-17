@@ -7,7 +7,6 @@ import Meta from '../components/Meta'
 import Navbar from '../components/Navbar'
 import Platforms from '../components/Platforms'
 import Search from '../components/Search'
-import data from '../data/episodeList'
 
 export default function Home() {
   return (

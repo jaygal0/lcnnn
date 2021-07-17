@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -27,16 +28,17 @@ const Subtitle = styled.p`
   text-transform: capitalize;
 `
 
-const Cards = ({ title, subtitle, src }) => {
-  // FIXME: Figure this out. How to set this up properly.
+const Cards = ({ title, subtitle, src, url }) => {
   return (
-    <Wrapper>
-      <ImageWrapper>
-        <Image src={src} layout="fill" objectFit="cover" />
-      </ImageWrapper>
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
-    </Wrapper>
+    <Link href={`/${url}`}>
+      <Wrapper>
+        <ImageWrapper>
+          <Image src={src} layout="fill" objectFit="cover" />
+        </ImageWrapper>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+      </Wrapper>
+    </Link>
   )
 }
 

@@ -5,8 +5,17 @@ import Meta from '../components/Meta'
 import Navbar from '../components/Navbar'
 import { SectionFlex } from '../styles'
 import data from '../data/episodeList'
+import uuid from 'react-uuid'
 
-export default function Home() {
+export const getStaticProps = async () => {
+  return {
+    props: {
+      episodes: data,
+    },
+  }
+}
+
+export default function Episodes({ episodes }) {
   return (
     <>
       <Meta />
@@ -20,9 +29,9 @@ export default function Home() {
           newsletter
         />
         <SectionFlex>
-          {data.map((item) => {
+          {episodes.map((item) => {
             const {
-              number,
+              id,
               firstName,
               surname,
               profession,
@@ -32,7 +41,9 @@ export default function Home() {
             } = item
             return (
               <CardEpisodes
-                title={`#${number} ${firstName} ${surname}`}
+                key={uuid()}
+                url={id}
+                title={`#${id} ${firstName} ${surname}`}
                 subtitle={profession}
                 src={src}
                 release={uploadDate}

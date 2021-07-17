@@ -18,11 +18,9 @@ const ImageWrapper = styled.div`
   padding-bottom: 25%;
   width: 70%;
   margin-bottom: ${({ theme }) => theme.margin.medium};
-  flex-grow: 1;
   overflow: hidden;
 `
 const TextWrapper = styled.div`
-  flex-grow: 2;
   margin-left: ${({ theme }) => theme.margin.medium};
 `
 const Release = styled.p`
@@ -37,9 +35,9 @@ const Subtitle = styled.p`
   margin-bottom: 0.8rem;
 `
 
-const CardEpisodes = ({ title, subtitle, release, body, src }) => {
+const CardEpisodes = ({ url, title, subtitle, release, body, src }) => {
   return (
-    <Link href="/detail/detail">
+    <Link href={`/${url}`}>
       <CardWrapper>
         <ImageWrapper>
           <Image src={src} layout="fill" objectFit="cover" />
@@ -48,7 +46,7 @@ const CardEpisodes = ({ title, subtitle, release, body, src }) => {
           <Release>{release}</Release>
           <Title>{title}</Title>
           <Subtitle>{subtitle}</Subtitle>
-          <p>{body}</p>
+          <p>{`${body.substring(0, 210)}...`}</p>
         </TextWrapper>
       </CardWrapper>
     </Link>

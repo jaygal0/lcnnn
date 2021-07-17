@@ -15,21 +15,20 @@ const AudioWrapper = styled.div`
 `
 const ImageWrapper = styled.div`
   position: relative;
-  flex-grow: 1;
-  padding-bottom: 35%;
+  width: 55%;
+  padding-bottom: 33%;
   border-radius: ${({ theme }) => theme.borderRadius.small};
   overflow: hidden;
   margin-right: ${({ theme }) => theme.margin.medium};
 `
-const ContentWrapper = styled.div`
-  flex-grow: 1;
-`
+const ContentWrapper = styled.div``
 const Position = styled.p`
   font-weight: bold;
   margin-bottom: ${({ theme }) => theme.margin.small};
+  text-transform: capitalize;
 `
 
-const AudioPlayer = ({ title, position, src }) => {
+const AudioPlayer = ({ title, position, src, body }) => {
   return (
     <AudioWrapper>
       <ImageWrapper>
@@ -38,7 +37,7 @@ const AudioPlayer = ({ title, position, src }) => {
       <ContentWrapper>
         <h3>{title}</h3>
         <Position>{position}</Position>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>{`${body.substring(0, 120)}...`}</p>
         <AudioBar />
       </ContentWrapper>
     </AudioWrapper>

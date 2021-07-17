@@ -23,9 +23,10 @@ const Episodes = () => {
     <SectionFlex>
       <h2>latest episodes</h2>
       <AudioPlayer
-        title={`#${data[0].number} ${data[0].firstName} ${data[0].surname}`}
+        title={`#${data[0].id} ${data[0].firstName} ${data[0].surname}`}
         position={data[0].proffession}
         src={data[0].src}
+        body={data[0].body}
       />
       <PopularEpisodesWrapper>
         <h2>popular episodes</h2>
@@ -33,14 +34,14 @@ const Episodes = () => {
       </PopularEpisodesWrapper>
       <CardWrapper>
         {data.map((item) => {
-          const { number, firstName, surname, profession, src } = item
+          const { id, firstName, surname, profession, src } = item
           return (
             <Cards
-              title={`#${number} ${firstName} ${surname}`}
+              key={id}
+              title={`#${id} ${firstName} ${surname}`}
               subtitle={profession}
               src={src}
-              // FIXME: Add url link as well
-              // FIXME: Add unique key UUID thingy
+              url={id}
             />
           )
         })}
