@@ -28,7 +28,7 @@ const Position = styled.p`
   text-transform: capitalize;
 `
 
-const AudioPlayer = ({ title, position, src, body }) => {
+const AudioPlayer = ({ title, position, src, body, audio }) => {
   return (
     <AudioWrapper>
       <ImageWrapper>
@@ -38,7 +38,7 @@ const AudioPlayer = ({ title, position, src, body }) => {
         <h3>{title}</h3>
         <Position>{position}</Position>
         <p>{`${body.substring(0, 120)}...`}</p>
-        <AudioBar />
+        <AudioBar audio={audio} />
       </ContentWrapper>
     </AudioWrapper>
   )

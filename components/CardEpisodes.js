@@ -33,6 +33,7 @@ const Title = styled.h3`
 const Subtitle = styled.p`
   font-weight: bold;
   margin-bottom: 0.8rem;
+  text-transform: capitalize;
 `
 
 const CardEpisodes = ({ url, title, subtitle, release, body, src }) => {

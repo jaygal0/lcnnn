@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { SectionGrid } from '../styles'
 import ButtonNumber from './ButtonNumber'
-import TextAndBtn from './TextAndBtn'
+import TextAndBtnAlt from './TextAndBtnAlt'
 import Image from 'next/image'
 
 const TextWrapper = styled.div`
@@ -20,7 +20,7 @@ const ImageWrapper = styled.div`
   overflow: hidden;
 `
 
-const ImageAndText = ({
+const ImageAndTextAlt = ({
   title,
   body,
   btnLabel,
@@ -28,6 +28,7 @@ const ImageAndText = ({
   link,
   src,
   subheading,
+  ahref,
 }) => {
   return (
     <SectionGrid>
@@ -40,16 +41,17 @@ const ImageAndText = ({
         <Image src={src} layout="fill" objectFit="cover" />
       </ImageWrapper>
       <TextWrapper>
-        <TextAndBtn
+        <TextAndBtnAlt
           title={title}
           body={body}
           btnLabel={btnLabel}
           link={link}
           subheading={subheading}
+          ahref={ahref}
         />
       </TextWrapper>
     </SectionGrid>
   )
 }
 
-export default ImageAndText
+export default ImageAndTextAlt

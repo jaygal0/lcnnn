@@ -68,6 +68,7 @@ export default {
   },
   transition: {
     fast: 'all .3s ease',
+    medium: 'all .6s ease',
   },
   margin: {
     large: '6.4rem',

@@ -36,7 +36,7 @@ const TextWrapper = styled.div`
 const Search = () => {
   return (
     <SectionGrid>
-      {/* TODO: Make this interactive */}
+      {/* FIXME: Make this animated */}
       <SearchWrapper>
         <LeftWrapper>
           <Image

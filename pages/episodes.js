@@ -32,6 +32,7 @@ export default function Episodes({ episodes }) {
           {episodes.map((item) => {
             const {
               id,
+              url,
               firstName,
               surname,
               profession,
@@ -42,7 +43,7 @@ export default function Episodes({ episodes }) {
             return (
               <CardEpisodes
                 key={uuid()}
-                url={id}
+                url={url}
                 title={`#${id} ${firstName} ${surname}`}
                 subtitle={profession}
                 src={src}

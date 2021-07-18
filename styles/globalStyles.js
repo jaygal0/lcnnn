@@ -13,9 +13,9 @@ body {
   font-weight: 400;
   letter-spacing: 0.05rem;
   background-color: ${({ theme }) => theme.color.offWhite};
-  /* background-image: url(blob-1.svg), url(blob-2.svg); */
-  /* background-position: 100% 40vw, 100% 232vw; */
-  /* background-repeat: no-repeat; */
+  background-image: url(blob-1.svg), url(blob-2.svg);
+  background-position: 100% 40vw, 100% 232vw;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -164,6 +164,7 @@ line-height: ${({ theme }) => theme.lineHeight.body};
 list-style: none;
 font-family: 'Archivo Black', sans-serif;
 text-transform: capitalize;
+margin-bottom: .8rem;
 
 &.nav {
 
@@ -196,7 +197,7 @@ margin-bottom: ${({ theme }) => theme.margin.small};
 
 input {
   margin-bottom: ${({ theme }) => theme.margin.medium};
-  background-color: ${({ theme }) => theme.color.offWhite};
+  background-color: transparent;
   padding: .8rem;
   width: 100%;
   outline: 0;
@@ -273,6 +274,10 @@ textarea {
 .rhap_volume-indicator {
   background-color: ${({ theme }) => theme.color.hotPink};
 }
+.display-modal .rhap_volume-controls {
+  display: block;
+  margin-left: 16px;
+}
 .rhap_progress-filled {
   background-color: ${({ theme }) => theme.color.hotPink};
 }
@@ -285,6 +290,11 @@ textarea {
 .rhap_current-time {
   color: ${({ theme }) => theme.color.white};
   margin-left: 1.6rem;
+}
+.hover-image {
+  &:hover{
+    cursor: pointer;
+  }
 }
 `
 

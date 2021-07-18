@@ -42,6 +42,7 @@ export default function Detail({ episode }) {
             position={episode.profession}
             src={episode.src}
             body={episode.body}
+            audio={episode.audio}
           />
           <Platforms />
           <p>{episode.body}</p>
@@ -94,8 +95,7 @@ export default function Detail({ episode }) {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const episodes = data.filter((item) => item.id.toString() === params.id)
-  // const episodes = data.filter((item) => item.id.toString() === params.id)
+  const episodes = data.filter((item) => item.url === params.id)
   return {
     props: {
       episode: episodes[0],
@@ -103,12 +103,8 @@ export const getStaticProps = async ({ params }) => {
   }
 }
 export const getStaticPaths = async () => {
-  // const url = `${episode.FirstName}-${episode.surname}`
   const paths = data.map((episode) => ({
-    // params: { id: episode.url.toString() },
-    // params: { id: episode.id.toString() },
-    params: { id: episode.id.toString() },
-    // FIXME: Make url the first and last name
+    params: { id: episode.url.toLowerCase() },
   }))
   return {
     paths,

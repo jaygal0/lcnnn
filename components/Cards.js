@@ -13,11 +13,12 @@ const Wrapper = styled.div`
   }
 `
 const ImageWrapper = styled.div`
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.borderRadius.small};
   position: relative;
   padding-bottom: 100%;
-  background: red;
+  background: ${({ theme }) => theme.color.grey};
   margin-bottom: ${({ theme }) => theme.margin.small};
+  overflow: hidden;
 `
 const Title = styled.p`
   font-weight: bold;
