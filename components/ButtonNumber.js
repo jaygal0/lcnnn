@@ -30,7 +30,7 @@ const Btn = styled.button`
 
 const ButtonNumber = ({ btnLabelNo, link }) => {
   return (
-    <Link href={link}>
+    <Link href={link} passHref>
       <Btn>{btnLabelNo}</Btn>
     </Link>
   )

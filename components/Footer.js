@@ -11,10 +11,9 @@ const Footer = ({ footer }) => {
         &copy; {moment().format('Y')} LCNNN. All rights reserved.{' '}
         <Link href="/privacy-policy">Privacy Policy</Link>
       </p>
-      {/* FIXME: Create a Privacy policy page*/}
       <p>
         Site built by{' '}
-        <a href="https://joshuagalinato.com" target="_blank">
+        <a href="https://joshuagalinato.com" target="_blank" rel="noreferrer">
           Joshua Galinato
         </a>
       </p>

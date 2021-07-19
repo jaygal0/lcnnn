@@ -32,7 +32,7 @@ const AudioPlayer = ({ title, position, src, body, audio }) => {
   return (
     <AudioWrapper>
       <ImageWrapper>
-        <Image src={src} layout="fill" objectFit="cover" />
+        <Image src={src} layout="fill" objectFit="cover" alt={title} />
       </ImageWrapper>
       <ContentWrapper>
         <h3>{title}</h3>

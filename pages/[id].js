@@ -52,7 +52,7 @@ export default function Detail({ episode }) {
               const { link, list } = item
               return (
                 <List key={uuid()}>
-                  <a href={link} target="_blank">
+                  <a href={link} target="_blank" rel="noreferrer">
                     {list}
                   </a>
                 </List>
@@ -65,7 +65,7 @@ export default function Detail({ episode }) {
               const { link, tool } = item
               return (
                 <List key={uuid()}>
-                  <a href={link} target="_blank">
+                  <a href={link} target="_blank" rel="noreferrer">
                     {tool}
                   </a>
                 </List>
@@ -78,7 +78,7 @@ export default function Detail({ episode }) {
               const { link, book } = item
               return (
                 <List key={uuid()}>
-                  <a href={link} target="_blank">
+                  <a href={link} target="_blank" rel="noreferrer">
                     {book}
                   </a>
                 </List>

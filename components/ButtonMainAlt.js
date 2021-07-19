@@ -36,7 +36,7 @@ const Btn = styled.button`
 
 const ButtonMainAlt = ({ btnLabel, link, btnPink, noMargin }) => {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       <Btn className={btnPink ? 'hotpink' : noMargin ? 'no-margin' : null}>
         {btnLabel}
       </Btn>

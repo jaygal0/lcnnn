@@ -37,7 +37,7 @@ const Btn = styled.button`
 
 const ButtonMain = ({ btnLabel, link, btnPink, noMargin }) => {
   return (
-    <Link href={link}>
+    <Link href={link} passHref>
       <Btn className={btnPink ? 'hotpink' : noMargin ? 'no-margin' : null}>
         {btnLabel}
       </Btn>

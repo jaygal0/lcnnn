@@ -37,7 +37,7 @@ const ImageAndText = ({
         btnLabelNo={btnLabelNo}
       />
       <ImageWrapper>
-        <Image src={src} layout="fill" objectFit="cover" />
+        <Image src={src} layout="fill" objectFit="cover" alt={title} />
       </ImageWrapper>
       <TextWrapper>
         <TextAndBtn

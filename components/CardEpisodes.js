@@ -38,10 +38,10 @@ const Subtitle = styled.p`
 
 const CardEpisodes = ({ url, title, subtitle, release, body, src }) => {
   return (
-    <Link href={`/${url}`}>
+    <Link href={`/${url}`} passHref>
       <CardWrapper>
         <ImageWrapper>
-          <Image src={src} layout="fill" objectFit="cover" />
+          <Image src={src} layout="fill" objectFit="cover" alt={title} />
         </ImageWrapper>
         <TextWrapper>
           <Release>{release}</Release>

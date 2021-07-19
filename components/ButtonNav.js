@@ -16,7 +16,7 @@ const Btn = styled.button`
 
 const ButtonNav = ({ btnLabel, link }) => {
   return (
-    <Link href={link}>
+    <Link href={link} passHref>
       <Btn>{btnLabel}</Btn>
     </Link>
   )
