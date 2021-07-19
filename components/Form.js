@@ -35,7 +35,7 @@ const Btn = styled.button`
 const Form = () => {
   return (
     <SectionFlex>
-      <h2>let's chat</h2>
+      <h2>let&apos;s chat</h2>
       <p>If you’ve got a /now page, I’d love to chat with you.</p>
       <FormContainer
         //   FIXME: Connect this to the right form
