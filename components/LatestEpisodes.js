@@ -18,7 +18,7 @@ const CardWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-const Episodes = () => {
+const LatestEpisodes = () => {
   return (
     <SectionFlex>
       <TextWrapper>
@@ -54,4 +54,4 @@ const Episodes = () => {
   )
 }
 
-export default Episodes
+export default LatestEpisodes

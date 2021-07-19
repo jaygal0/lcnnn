@@ -1,4 +1,3 @@
-import Episodes from '../components/episodes'
 import Footer from '../components/Footer'
 import Form from '../components/Form'
 import Hero from '../components/Hero'
@@ -9,6 +8,7 @@ import Navbar from '../components/Navbar'
 import Platforms from '../components/Platforms'
 import Search from '../components/Search'
 import data from '../data/episodeList'
+import LatestEpisodes from '../components/LatestEpisodes'
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ export default function Home() {
           src="https://sive.rs/images/DerekSivers-20141209a-1853.jpg"
         />
         <Platforms />
-        <Episodes />
+        <LatestEpisodes />
         <ImageAndTextAlt
           title="host &amp; creator"
           subheading="joshua galinato"
