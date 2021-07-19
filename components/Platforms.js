@@ -30,29 +30,54 @@ const Platforms = () => {
       <Heading>available on all major platforms</Heading>
       <LogoWrapper>
         {/* //FIXME: Add links once the sites are up */}
-        <Link href="/">
+        <Link href="/" passHref>
           <ImageWrapper>
-            <Image src="/pocket-casts.svg" layout="fill" objectFit="cover" />
+            <Image
+              src="/pocket-casts.svg"
+              layout="fill"
+              objectFit="cover"
+              alt="pocket casts"
+            />
           </ImageWrapper>
         </Link>
-        <Link href="/">
+        <Link href="/" passHref>
           <ImageWrapper>
-            <Image src="/apple-podcast.svg" layout="fill" objectFit="cover" />
+            <Image
+              src="/apple-podcast.svg"
+              layout="fill"
+              objectFit="cover"
+              alt="apple podcast"
+            />
           </ImageWrapper>
         </Link>
-        <Link href="/">
+        <Link href="/" passHref>
           <ImageWrapper>
-            <Image src="/spotify.svg" layout="fill" objectFit="cover" />
+            <Image
+              src="/spotify.svg"
+              layout="fill"
+              objectFit="cover"
+              alt="spotify"
+            />
           </ImageWrapper>
         </Link>
-        <Link href="/">
+        <Link href="/" passHref>
           <ImageWrapper>
-            <Image src="/google-podcast.svg" layout="fill" objectFit="cover" />
+            <Image
+              src="/google-podcast.svg"
+              layout="fill"
+              objectFit="cover"
+              alt="google podcast"
+            />
           </ImageWrapper>
         </Link>
-        <Link href="/">
+        <Link href="/" passHref>
           <ImageWrapper>
-            <Image src="/overcast.svg" layout="fill" objectFit="cover" />
+            <Image
+              src="/overcast.svg"
+              layout="fill"
+              objectFit="cover"
+              alt="overcast"
+            />
           </ImageWrapper>
         </Link>
       </LogoWrapper>

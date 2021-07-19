@@ -102,12 +102,12 @@ const Navbar = () => {
   const showModal = () => setModal(!modal)
   return (
     <Nav>
-      <Link href="/">
+      <Link href="/" passHref>
         <LogoWrapper></LogoWrapper>
       </Link>
       <LinksWrapper>
         <ul>
-          <Link href="/episodes">
+          <Link href="/episodes" passHref>
             <li
               className={`${
                 router.pathname == '/episodes' ? 'active' : ''
@@ -124,12 +124,17 @@ const Navbar = () => {
       {/* AUDIO MODAL PLAYER */}
       <AudioWrapper className={modal ? 'show-modal' : 'hide-modal'}>
         <ImageWrapper>
-          <Image src={data[0].src} layout="fill" objectFit="cover" />
+          <Image
+            src={data[0].src}
+            layout="fill"
+            objectFit="cover"
+            alt={`${data[0].firstName} ${data[0].surname}`}
+          />
         </ImageWrapper>
         <ContentWrapper>
           <CloseWrapper>
             <TextWrapper>
-              <Link href={`/${data[0].url}`} onClick={showModal}>
+              <Link href={`/${data[0].url}`} onClick={showModal} passHref>
                 <Title>{`#${data[0].id} ${data[0].firstName} ${data[0].surname}`}</Title>
               </Link>
               <Position>{data[0].profession}</Position>
@@ -140,6 +145,7 @@ const Navbar = () => {
               height={24}
               onClick={showModal}
               className="hover-image"
+              alt="close button"
             />
             {/* FIXME: Figure out the auto stop when closing the modal */}
           </CloseWrapper>
