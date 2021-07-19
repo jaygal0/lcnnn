@@ -296,6 +296,29 @@ textarea {
     cursor: pointer;
   }
 }
+.CookieConsent {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 1.6rem;
+  background: ${({ theme }) => theme.color.pink};
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: ${({ theme }) => theme.font.body};
+  line-height: ${({ theme }) => theme.lineHeight.body};
+  margin: 1.6rem;
+  border-radius: ${({ theme }) => theme.borderRadius.small};
+}
+#rcc-confirm-button {
+  background: ${({ theme }) => theme.color.blue};
+  color: ${({ theme }) => theme.color.white};
+  border-radius: ${({ theme }) => theme.borderRadius.small};
+  font-size: ${({ theme }) => theme.font.body};
+  padding: .8rem;
+  margin-top: ${({ theme }) => theme.margin.small};
+  width: 100%;
+}
 `
 
 export default GlobalStyle
