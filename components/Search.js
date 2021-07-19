@@ -58,6 +58,7 @@ const Search = () => {
           btnLabel="let's chat"
           link="#"
         />
+        {/* FIXME: Create a modal for the form */}
       </TextWrapper>
     </SectionGrid>
   )
