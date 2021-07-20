@@ -35,8 +35,7 @@ export const SectionFlex = styled.section`
     }
   }
 
-  @media screen and (max-width: ${({ theme }) =>
-      theme.breakPoint.phoneMedium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     grid-column: 1 / -1;
   }
 `

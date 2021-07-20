@@ -35,7 +35,10 @@ const Btn = styled.button`
 
   &.no-margin {
     margin-top: 0;
-    width: 40%;
+    @media screen and (max-width: ${({ theme }) =>
+        theme.breakPoint.phoneLarge}) {
+      width: 40%;
+    }
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
