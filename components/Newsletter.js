@@ -4,7 +4,11 @@ import styled from 'styled-components'
 const FormWrapper = styled.form`
   margin-top: ${({ theme }) => theme.margin.medium};
   display: flex;
+  flex-direction: column;
   width: 100%;
+`
+const FieldsWrapper = styled.div`
+  display: flex;
   gap: 3.2rem;
 `
 const Wrapper = styled.div`
@@ -12,12 +16,14 @@ const Wrapper = styled.div`
   flex-direction: column;
   flex-grow: 1;
 `
-const Btn = styled.button`
+const Btn = styled.input`
   width: min-content;
   background-color: ${({ theme }) => theme.color.blue};
   color: ${({ theme }) => theme.color.white};
   padding: 0.8rem 1.6rem;
   border-radius: ${({ theme }) => theme.borderRadius.small};
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: capitalize;
 
   &:hover {
     filter: brightness(110%);
@@ -30,26 +36,30 @@ const Newsletter = () => {
   return (
     <div>
       <FormWrapper
-        //   FIXME: Connect this to the right form
-        action="https://getform.io/f/47044ea9-307a-48c4-9768-6d0775db5e10"
+        action="https://letschatnownownow.us6.list-manage.com/subscribe/post"
         method="POST"
-        name="email-form"
       >
-        <Wrapper>
-          <label htmlFor="first name">first name</label>
-          <input type="text" name="first name" placeholder="Joshua" />
-        </Wrapper>
+        <input type="hidden" name="u" value="eaceeafc424265fb858e64767" />
+        <input type="hidden" name="id" value="14ee4f1624" />
+        <FieldsWrapper>
+          <Wrapper>
+            <label htmlFor="MERGE1">first name</label>
+            <input type="text" name="MERGE1" placeholder="Joshua" id="MERGE1" />
+          </Wrapper>
 
-        <Wrapper>
-          <label htmlFor="email">email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="hi@joshuagalinato.com"
-          />
-        </Wrapper>
+          <Wrapper>
+            <label htmlFor="MERGE0">email</label>
+            <input
+              type="email"
+              name="MERGE0"
+              id="MERGE0"
+              tab-index="-1"
+              placeholder="hi@joshuagalinato.com"
+            />
+          </Wrapper>
+        </FieldsWrapper>
+        <Btn type="submit" name="submit" value="submit" />
       </FormWrapper>
-      <Btn type="submit">subscribe</Btn>
     </div>
   )
 }

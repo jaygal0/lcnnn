@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 import { Link as Scroll } from 'react-scroll'
 
 const Btn = styled.button`
@@ -36,14 +35,12 @@ const Btn = styled.button`
   }
 `
 
-const ButtonMain = ({ btnLabel, link, btnPink, noMargin }) => {
+const ButtonMainScroll = ({ btnLabel }) => {
   return (
-    <Link href={link} passHref>
-      <Btn className={btnPink ? 'hotpink' : noMargin ? 'no-margin' : null}>
-        {btnLabel}
-      </Btn>
-    </Link>
+    <Scroll to="form" smooth={true} duration={1500} offset={-40}>
+      <Btn>{btnLabel}</Btn>
+    </Scroll>
   )
 }
 
-export default ButtonMain
+export default ButtonMainScroll
