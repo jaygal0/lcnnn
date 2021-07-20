@@ -278,7 +278,8 @@ const episode = [
     src: 'https://www.gravatar.com/avatar/1e16e9934de7105de1325bd652a1faa8?s=300',
     uploadDate: '02/02/22',
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    audio:
+      'https://content.production.cdn.art19.com/validation=1626849354,cf5ed798-a434-5e8b-9b13-5eb3e1caedcd,EmfHPEP0Fw5tMCISv1D6vpjc7SM/episodes/7e500473-128a-434f-a5c1-aa1f6ce65385/8eac7357f40113a1db5dcf0a3acda944cbf247b7593cf88726eb5c57e1e8a6668d0ec36ebafb4b8a8dc8425e910383b2bc1939e8ffa3abdeecb4e13f282f8b71/TheTimFerrissShow_Anne%20Lamott_Final.mp3',
     links: [
       {
         list: 'website',

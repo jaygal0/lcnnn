@@ -57,8 +57,8 @@ const Search = () => {
           body="It’s fun reading your /now page, but I find that you learn more about a person when you sit down and have a chat with them."
           btnLabel="let's chat"
           link="#"
+          scroll
         />
-        {/* FIXME: Create a modal for the form */}
       </TextWrapper>
     </SectionGrid>
   )
