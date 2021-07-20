@@ -12,6 +12,19 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 1 / -1;
+    margin-left: ${({ theme }) => theme.margin.medium};
+    margin-right: ${({ theme }) => theme.margin.medium};
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    margin-right: 0;
+  }
 `
 const LogoWrapper = styled.div`
   position: relative;
@@ -22,7 +35,38 @@ const LogoWrapper = styled.div`
     cursor: pointer;
   }
 `
-const LinksWrapper = styled.div``
+const LinksWrapper = styled.div`
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    opacity: 0.98;
+    background: ${({ theme }) => theme.color.pink};
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min-content;
+    padding: 3.2rem 1.6rem;
+    z-index: 10;
+    border-radius: ${({ theme }) => theme.borderRadius.small};
+
+    &.hideMenu {
+      transition: ${({ theme }) => theme.transition.fast};
+      top: -400%;
+    }
+    &.showMenu {
+      transition: ${({ theme }) => theme.transition.fast};
+      top: 0;
+      right: 0;
+    }
+  }
+`
+const UnorderedList = styled.ul`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    flex-direction: column;
+    justify-content: center;
+  }
+`
 const CTA = styled.li`
   padding: 0.8rem 1.6rem;
   background-color: ${({ theme }) => theme.color.hotPink};
@@ -33,6 +77,11 @@ const CTA = styled.li`
     background-color: ${({ theme }) => theme.color.blue};
     color: ${({ theme }) => theme.color.white};
     transition: ${({ theme }) => theme.transition.fast};
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    width: 100%;
+    text-align: center;
+    margin-top: ${({ theme }) => theme.margin.medium};
   }
 `
 // AUDIO WRAPPER STYLING
@@ -70,6 +119,10 @@ const ImageWrapper = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.small};
   overflow: hidden;
   margin-right: ${({ theme }) => theme.margin.medium};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    display: none;
+  }
 `
 const ContentWrapper = styled.div`
   width: 100%;
@@ -94,12 +147,45 @@ const Position = styled.p`
   margin-bottom: ${({ theme }) => theme.margin.small};
   margin-left: ${({ theme }) => theme.margin.small};
   text-transform: capitalize;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    display: none;
+  }
+`
+const Hamburger = styled.div`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    display: block;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 1.6rem;
+    right: 0;
+  }
+`
+const CloseModalWrapper = styled.div`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.8rem;
+  }
+`
+const Date = styled.p`
+  font: ${({ theme }) => theme.font.meta};
+  margin-top: -0.8rem;
 `
 
 const Navbar = () => {
+  // To open podcast modal
   const router = useRouter()
   const [modal, setModal] = useState(false)
   const showModal = () => setModal(!modal)
+  // To open and close phone menu
+  const [sidebar, setSidebar] = useState(true)
+  const showSidebar = () => setSidebar(!sidebar)
   return (
     <Nav>
       <Link href="/" passHref>
@@ -107,8 +193,17 @@ const Navbar = () => {
           <Image src="/lcnnn-logo.svg" layout="fill" objectFit="cover" />
         </LogoWrapper>
       </Link>
-      <LinksWrapper>
-        <ul>
+      <LinksWrapper className={sidebar ? 'hideMenu' : 'showMenu'}>
+        <CloseModalWrapper>
+          <Image
+            src="/close-icon.svg"
+            width={24}
+            height={24}
+            alt="close button"
+            onClick={showSidebar}
+          />
+        </CloseModalWrapper>
+        <UnorderedList>
           <Link href="/episodes" passHref>
             <li
               className={`${
@@ -121,8 +216,17 @@ const Navbar = () => {
           <CTA className="nav" onClick={modal == false ? showModal : null}>
             listen now
           </CTA>
-        </ul>
+        </UnorderedList>
       </LinksWrapper>
+      {/* HAMBURGER MENU */}
+      <Hamburger>
+        <Image
+          src="/hamburger.svg"
+          layout="fill"
+          objectFit="cover"
+          onClick={showSidebar}
+        />
+      </Hamburger>
       {/* AUDIO MODAL PLAYER */}
       <AudioWrapper className={modal ? 'show-modal' : 'hide-modal'}>
         <ImageWrapper>
@@ -151,6 +255,7 @@ const Navbar = () => {
             />
             {/* FIXME: Figure out the auto stop when closing the modal */}
           </CloseWrapper>
+          <Date>{data[0].uploadDate}</Date>
           <AudioBar modal audio={data[0].audio} />
         </ContentWrapper>
       </AudioWrapper>

@@ -34,6 +34,7 @@ export default function Detail({ episode }) {
         <Hero
           title={`${episode.firstName} ${episode.surname}`}
           subtitle="subscribe to the newsletter for more episodes"
+          released={`#${episode.id} | ${episode.uploadDate}`}
           newsletter
         />
         <SectionFlex>
@@ -43,6 +44,7 @@ export default function Detail({ episode }) {
             src={episode.src}
             body={episode.body}
             audio={episode.audio}
+            released={episode.uploadDate}
           />
           <Platforms />
           <p>{episode.body}</p>

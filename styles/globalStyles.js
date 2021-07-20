@@ -14,7 +14,7 @@ body {
   letter-spacing: 0.05rem;
   background-color: ${({ theme }) => theme.color.offWhite};
   background-image: url(blob-1.svg), url(blob-2.svg);
-  background-position: 100% 40vw, 100% 232vw;
+  background-position: center 40vw, center 232vw;
   background-repeat: no-repeat;
 }
 
@@ -24,12 +24,12 @@ header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.6rem;
+  margin: 0 auto;
 
   @media screen and (max-width: ${({ theme }) =>
-    theme.breakPoint.phoneMedium}) {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 1.6rem;
-    margin: 0 1.6rem;
+    theme.breakPoint.desktopLarge}) {
+  margin: 0 3.2rem;
+
   }
 }
 nav {
@@ -38,10 +38,15 @@ nav {
 main {
   max-width: 144rem;
   height: min-content;
-  margin: 0 3.2rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.6rem;
+  margin: 0 auto;
+
+  @media screen and (max-width: ${({ theme }) =>
+    theme.breakPoint.desktopLarge}) {
+  margin: 0 3.2rem;
+  }
 
   @media screen and (max-width: ${({ theme }) =>
     theme.breakPoint.phoneMedium}) {
@@ -53,10 +58,15 @@ main {
 footer {
   max-width: 144rem;
   height: min-content;
-  margin: 0 3.2rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.6rem;
+
+  @media screen and (max-width: ${({ theme }) =>
+    theme.breakPoint.desktopLarge}) {
+  margin: 0 3.2rem;
+  }
 }
 
 h1 {
@@ -68,8 +78,7 @@ h1 {
   font-weight: 900;
   margin-bottom: ${({ theme }) => theme.margin.small};
 
-  @media screen and (max-width: ${({ theme }) =>
-    theme.breakPoint.phoneMedium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
   font-size: ${({ theme }) => theme.font.phone.h1};
   line-height: ${({ theme }) => theme.lineHeight.phone.h1};
   }
@@ -84,8 +93,7 @@ h2 {
   font-weight: 400;
   margin-bottom: ${({ theme }) => theme.margin.small};
   
-  @media screen and (max-width: ${({ theme }) =>
-    theme.breakPoint.phoneMedium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
   font-size: ${({ theme }) => theme.font.phone.h2};
   line-height: ${({ theme }) => theme.lineHeight.phone.h2};
   }
@@ -100,8 +108,7 @@ h3 {
     font-weight: 900;
   margin-bottom: ${({ theme }) => theme.margin.small};
 
-  @media screen and (max-width: ${({ theme }) =>
-    theme.breakPoint.phoneMedium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
   font-size: ${({ theme }) => theme.font.phone.h3};
   line-height: ${({ theme }) => theme.lineHeight.phone.h3};
   }
@@ -154,8 +161,6 @@ blockquote p {
 }
 
 ul {
-  display: flex;
-  align-items: center;
 }
 
 li {
@@ -165,6 +170,10 @@ list-style: none;
 font-family: 'Archivo Black', sans-serif;
 text-transform: capitalize;
 margin-bottom: .8rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+margin-top: 1.6rem;
+  }
 
 &.nav {
 
@@ -182,6 +191,7 @@ margin-bottom: .8rem;
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     list-style: none;
       }
+
 }
 li:not(:last-child){
   margin-right: 8rem;
@@ -217,7 +227,7 @@ input {
 
 textarea {
   font-family: 'Open Sans', sans-serif;
-  background-color: ${({ theme }) => theme.color.offWhite};
+  background-color: transparent;
   padding: .8rem;
   outline: 0;
   border: none;
@@ -234,6 +244,13 @@ textarea {
   &:focus {
   border-bottom: 1px solid ${({ theme }) => theme.color.hotPink};
   transition: ${({ theme }) => theme.transition.fast}
+  }
+}
+
+// For the icons on the search field on the index page
+.search-icon {
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    opacity: 0;
   }
 }
 

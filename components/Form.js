@@ -5,9 +5,13 @@ import { SectionFlex } from '../styles'
 const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.color.offWhite};
+  background-color: transparent;
   padding: 3.2rem;
   border-radius: ${({ theme }) => theme.borderRadius.small};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    padding: 3.2rem 0;
+  }
 `
 const InputNameWrapper = styled.div`
   display: flex;
@@ -31,6 +35,10 @@ const Btn = styled.input`
     filter: brightness(110%);
     cursor: pointer;
     transition: ${({ theme }) => theme.transition.fast};
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    width: 100%;
   }
 `
 

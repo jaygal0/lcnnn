@@ -9,11 +9,8 @@ export const SectionGrid = styled.section`
   column-gap: 1.6rem;
   margin-bottom: ${({ theme }) => theme.verticleRythmn.desktop};
 
-  @media screen and (max-width: ${({ theme }) =>
-      theme.breakPoint.phoneMedium}) {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 1.6rem;
-    margin: 0 1.6rem;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 1 / -1;
   }
 `
 export const SectionFlex = styled.section`
@@ -27,10 +24,20 @@ export const SectionFlex = styled.section`
     grid-column: 2 / span 10;
     flex-direction: row;
     justify-content: space-between;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+      grid-column: 1 / -1;
+    }
+
+    @media screen and (max-width: ${({ theme }) =>
+        theme.breakPoint.phoneMedium}) {
+      flex-direction: column;
+    }
   }
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakPoint.phoneMedium}) {
+    grid-column: 1 / -1;
   }
 `
 
@@ -38,4 +45,8 @@ export const Heading = styled.h2`
   grid-column: 2 / -1;
   grid-row: 1;
   margin-bottom: ${({ theme }) => theme.margin.medium};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    grid-column: 1 / -1;
+  }
 `

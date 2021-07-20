@@ -9,6 +9,12 @@ const LogoWrapper = styled.div`
   grid-row: 2;
   display: flex;
   gap: 3.2rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    justify-content: space-evenly;
+  }
 `
 const ImageWrapper = styled.div`
   position: relative;
@@ -16,6 +22,11 @@ const ImageWrapper = styled.div`
   padding-bottom: 18%;
   border-radius: ${({ theme }) => theme.borderRadius.medium};
   overflow: hidden;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    width: calc(100% / 4);
+    padding-bottom: 25%;
+  }
 
   &:hover {
     filter: brightness(105%);

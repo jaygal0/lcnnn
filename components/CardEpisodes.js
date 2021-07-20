@@ -19,9 +19,18 @@ const ImageWrapper = styled.div`
   width: 70%;
   margin-bottom: ${({ theme }) => theme.margin.medium};
   overflow: hidden;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    display: none;
+  }
 `
 const TextWrapper = styled.div`
   margin-left: ${({ theme }) => theme.margin.medium};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    margin-left: 0;
+    margin-bottom: ${({ theme }) => theme.margin.medium};
+  }
 `
 const Release = styled.p`
   margin-bottom: 0.8rem;

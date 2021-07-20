@@ -12,6 +12,10 @@ const AudioWrapper = styled.div`
   padding: 3.2rem;
   align-items: center;
   margin-bottom: 8rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    flex-direction: column;
+  }
 `
 const ImageWrapper = styled.div`
   position: relative;
@@ -20,6 +24,17 @@ const ImageWrapper = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.small};
   overflow: hidden;
   margin-right: ${({ theme }) => theme.margin.medium};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    margin-right: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: ${({ theme }) => theme.margin.small};
+  }
+`
+const Date = styled.p`
+  font: ${({ theme }) => theme.font.meta};
+  margin-top: -0.8rem;
 `
 const ContentWrapper = styled.div``
 const Position = styled.p`
@@ -28,7 +43,7 @@ const Position = styled.p`
   text-transform: capitalize;
 `
 
-const AudioPlayer = ({ title, position, src, body, audio }) => {
+const AudioPlayer = ({ title, position, src, body, audio, released }) => {
   return (
     <AudioWrapper>
       <ImageWrapper>
@@ -36,6 +51,7 @@ const AudioPlayer = ({ title, position, src, body, audio }) => {
       </ImageWrapper>
       <ContentWrapper>
         <h3>{title}</h3>
+        <Date>{released}</Date>
         <Position>{position}</Position>
         <p>{`${body.substring(0, 120)}...`}</p>
         <AudioBar audio={audio} />

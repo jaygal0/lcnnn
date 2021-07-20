@@ -1,6 +1,3 @@
-- [ ] Logo design
-- [ ] Responsive design
-- [ ] Sort out Mailchimp settings and branding
 - [ ] Create a test episode
 - [ ] Email people
 

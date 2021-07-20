@@ -9,6 +9,11 @@ const TextWrapper = styled.div`
   grid-column: 7 / span 4;
   grid-row: 2;
   margin-top: -16rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    grid-column: 1 / -1;
+    margin-top: ${({ theme }) => theme.margin.medium};
+  }
 `
 const ImageWrapper = styled.div`
   grid-column: 2 / span 4;
@@ -18,6 +23,10 @@ const ImageWrapper = styled.div`
   padding-bottom: 100%;
   background: ${({ theme }) => theme.color.grey};
   overflow: hidden;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    grid-column: 1 / -1;
+  }
 `
 
 const ImageAndTextAlt = ({

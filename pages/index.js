@@ -21,7 +21,7 @@ export default function Home() {
         <Hero
           title="what are you doing now?"
           subtitle="a podcast for people with a /now page"
-          btnLabel="listen now"
+          btnLabel="latest episode"
           btnPink={true}
           link={data[0].url}
         />

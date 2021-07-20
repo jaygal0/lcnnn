@@ -11,6 +11,23 @@ const Wrapper = styled.div`
   &:hover {
     cursor: pointer;
   }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakPoint.desktopSmall}) {
+    width: calc(100% / 4.79);
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: calc(100% / 4.7);
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    width: calc(100% / 3.33);
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneSmall}) {
+    width: calc(100% / 2.2);
+  }
 `
 const ImageWrapper = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.small};

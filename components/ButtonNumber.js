@@ -22,9 +22,8 @@ const Btn = styled.button`
     grid-column: 1 / span 1;
   }
 
-  @media screen and (max-width: ${({ theme }) =>
-      theme.breakPoint.phoneMedium}) {
-    width: 100%;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    display: none;
   }
 `
 

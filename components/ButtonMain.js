@@ -15,6 +15,13 @@ const Btn = styled.button`
     transition: ${({ theme }) => theme.transition.fast};
   }
 
+  &.width {
+    @media screen and (max-width: ${({ theme }) =>
+        theme.breakPoint.phoneLarge}) {
+      width: 40%;
+    }
+  }
+
   &.hotpink {
     background-color: ${({ theme }) => theme.color.hotPink};
     color: ${({ theme }) => theme.color.black};
@@ -28,14 +35,15 @@ const Btn = styled.button`
 
   &.no-margin {
     margin-top: 0;
+    width: 40%;
   }
-  @media screen and (max-width: ${({ theme }) =>
-      theme.breakPoint.phoneMedium}) {
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
     width: 100%;
   }
 `
 
-const ButtonMain = ({ btnLabel, link, btnPink, noMargin }) => {
+const ButtonMain = ({ btnLabel, link, btnPink, noMargin, width }) => {
   return (
     <Link href={link} passHref>
       <Btn className={btnPink ? 'hotpink' : noMargin ? 'no-margin' : null}>

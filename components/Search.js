@@ -14,6 +14,10 @@ const SearchWrapper = styled.div`
   border-radius: 8rem;
   padding: 1.6rem 4rem;
   background: ${({ theme }) => theme.color.grey};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    padding: 0.8rem 0.8rem;
+  }
 `
 const LeftWrapper = styled.div`
   display: flex;
@@ -23,6 +27,16 @@ const Content = styled.div`
   margin-left: 3.2rem;
   font-size: ${({ theme }) => theme.font.desktop.h2};
   line-height: ${({ theme }) => theme.font.desktop.h2};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    font-size: ${({ theme }) => theme.font.phone.h3};
+    line-height: ${({ theme }) => theme.lineHeight.phone.h1};
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneSmall}) {
+    font-size: ${({ theme }) => theme.font.body};
+    line-height: ${({ theme }) => theme.lineHeight.body};
+  }
 `
 const Highlight = styled.span`
   font-weight: 900;
@@ -32,6 +46,10 @@ const TextWrapper = styled.div`
   grid-column: 6 / span 4;
   grid-row: 2;
   margin-top: 4.8rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    grid-column: 1 / -1;
+  }
 `
 const Search = () => {
   return (
@@ -44,12 +62,19 @@ const Search = () => {
             alt="search icon"
             width={48}
             height={48}
+            className="search-icon"
           />
           <Content>
             yourwebsite.com/<Highlight>now</Highlight>
           </Content>
         </LeftWrapper>
-        <Image src="/mic-icon.svg" alt="search icon" width={48} height={48} />
+        <Image
+          className="search-icon"
+          src="/mic-icon.svg"
+          alt="search icon"
+          width={48}
+          height={48}
+        />
       </SearchWrapper>
       <TextWrapper>
         <TextAndBtn

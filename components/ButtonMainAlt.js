@@ -28,8 +28,7 @@ const Btn = styled.button`
   &.no-margin {
     margin-top: 0;
   }
-  @media screen and (max-width: ${({ theme }) =>
-      theme.breakPoint.phoneMedium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
     width: 100%;
   }
 `

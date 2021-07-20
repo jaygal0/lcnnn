@@ -16,6 +16,14 @@ const CardWrapper = styled.div`
   display: flex;
   gap: 3.2rem;
   flex-wrap: wrap;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    gap: 3.2rem;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phoneLarge}) {
+    gap: 1.6rem;
+  }
 `
 
 const LatestEpisodes = () => {
@@ -31,6 +39,7 @@ const LatestEpisodes = () => {
         src={data[0].src}
         body={data[0].body}
         audio={data[0].audio}
+        released={data[0].uploadDate}
       />
       <TextWrapper>
         <h2>recent episodes</h2>
