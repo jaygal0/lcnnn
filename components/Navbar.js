@@ -14,9 +14,9 @@ const Nav = styled.nav`
   align-items: center;
 `
 const LogoWrapper = styled.div`
-  width: 96px;
-  height: 96px;
-  background: ${({ theme }) => theme.color.hotPink};
+  position: relative;
+  width: 216px;
+  height: 72px;
 
   &:hover {
     cursor: pointer;
@@ -103,7 +103,9 @@ const Navbar = () => {
   return (
     <Nav>
       <Link href="/" passHref>
-        <LogoWrapper></LogoWrapper>
+        <LogoWrapper>
+          <Image src="/lcnnn-logo.svg" layout="fill" objectFit="cover" />
+        </LogoWrapper>
       </Link>
       <LinksWrapper>
         <ul>
