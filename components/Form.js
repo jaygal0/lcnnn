@@ -53,7 +53,7 @@ const Form = () => {
 
   return (
     <SectionFlex>
-      <h2 id="form">let&apos;s chat</h2>
+      <h2 id="form">let's chat</h2>
       <p>If you’ve got a /now page, I’d love to chat with you.</p>
       <FormContainer
         action="https://getform.io/f/00d8bd72-0c75-4380-801c-e3cc99b61ece"
