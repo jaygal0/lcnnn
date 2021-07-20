@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { Link as Scroll } from 'react-scroll'
 
 const Btn = styled.button`
   background-color: ${({ theme }) => theme.color.blue};
