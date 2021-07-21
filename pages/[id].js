@@ -23,6 +23,13 @@ const List = styled.li`
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
 `
+const ATag = styled.a`
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
 
 export default function Detail({ episode }) {
   return (
@@ -62,9 +69,9 @@ export default function Detail({ episode }) {
               const { link, list } = item
               return (
                 <List key={uuid()}>
-                  <a href={link} target="_blank" rel="noreferrer">
+                  <ATag href={link} target="_blank" rel="noreferrer">
                     {list}
-                  </a>
+                  </ATag>
                 </List>
               )
             })}
@@ -75,9 +82,9 @@ export default function Detail({ episode }) {
               const { link, tool } = item
               return (
                 <List key={uuid()}>
-                  <a href={link} target="_blank" rel="noreferrer">
+                  <ATag href={link} target="_blank" rel="noreferrer">
                     {tool}
-                  </a>
+                  </ATag>
                 </List>
               )
             })}
@@ -88,9 +95,9 @@ export default function Detail({ episode }) {
               const { link, book } = item
               return (
                 <List key={uuid()}>
-                  <a href={link} target="_blank" rel="noreferrer">
+                  <ATag href={link} target="_blank" rel="noreferrer">
                     {book}
-                  </a>
+                  </ATag>
                 </List>
               )
             })}

@@ -327,8 +327,12 @@ const episode = [
       'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2021-6-21/73ffe984-5b80-0bf6-bc06-7b595b0bfb03.mp3',
     links: [
       {
-        list: 'website',
+        list: 'my personal website',
         link: 'https://joshuagalinato.com',
+      },
+      {
+        list: 'derek sivers blog',
+        link: 'https://sive.rs',
       },
     ],
     tools: [],
