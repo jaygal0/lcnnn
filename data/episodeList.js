@@ -334,6 +334,10 @@ const episode = [
         list: 'derek sivers blog',
         link: 'https://sive.rs',
       },
+      {
+        list: 'NowNowNow directory',
+        link: 'https://nownownow.com/',
+      },
     ],
     tools: [],
     books: [],
