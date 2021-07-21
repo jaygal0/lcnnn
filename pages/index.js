@@ -13,7 +13,10 @@ import LatestEpisodes from '../components/LatestEpisodes'
 export default function Home() {
   return (
     <>
-      <Meta />
+      <Meta
+        title="Let's Chat NowNowNow"
+        desc="A podcast for people with a /now page"
+      />
       <header>
         <Navbar />
       </header>
@@ -28,9 +31,10 @@ export default function Home() {
         <Search />
         <ImageAndText
           title="inspired &amp; approved by derek sivers"
-          body="Creator of NowNowNow.com, Derek sits down and joins the podcast."
+          // body="Creator of NowNowNow.com, Derek sits down and joins the podcast."
+          body="This is still pending approval. I left this here as a reminder for me to get Derek onto the podcast."
           btnLabel="listen now"
-          btnLabelNo="#1"
+          btnLabelNo="#?"
           link="/derek-sivers"
           src="https://sive.rs/images/DerekSivers-20141209a-1853.jpg"
         />
@@ -41,7 +45,7 @@ export default function Home() {
           subheading="joshua galinato"
           body="I enjoy conversations and going through peoples /now page, so I built this site to kill two birds with one stone."
           btnLabel="what i'm doing now"
-          btnLabelNo="#2"
+          btnLabelNo="#1"
           link="/joshua-galinato"
           ahref="https://joshuagalinato.com/now"
           src="https://www.gravatar.com/avatar/1e16e9934de7105de1325bd652a1faa8?s=900"

@@ -5,7 +5,7 @@ const Meta = ({ title, desc }) => {
   return (
     <Head>
       <title>{title}</title>
-      <link rel="icon" href="/logo.svg" />
+      <link rel="icon" href="/favicon.svg" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link

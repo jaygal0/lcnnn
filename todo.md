@@ -1,4 +1,3 @@
-- [ ] Create a test episode
 - [ ] Email people
 
 <!-- When I reach 8 episodes -->

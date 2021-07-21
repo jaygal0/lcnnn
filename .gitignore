@@ -2,6 +2,7 @@
 
 # document folders
 /ai
+/png
 # dependencies
 /node_modules
 /.pnp

@@ -8,6 +8,7 @@ import Platforms from '../components/Platforms'
 import { SectionFlex } from '../styles'
 import data from '../data/episodeList'
 import uuid from 'react-uuid'
+import Form from '../components/Form'
 
 const ListWrapper = styled.ul`
   display: flex;
@@ -26,7 +27,14 @@ const List = styled.li`
 export default function Detail({ episode }) {
   return (
     <>
-      <Meta />
+      <Meta
+        title={`${episode.firstName.replace(/^\w/, (c) =>
+          c.toUpperCase()
+        )} ${episode.surname.replace(/^\w/, (c) =>
+          c.toUpperCase()
+        )} | Let's Chat NowNowNow`}
+        desc={`${episode.firstName} ${episode.surname} joins the Let's Chat NowNowNow podcast and talks about what they're up to right now.`}
+      />
       <header>
         <Navbar />
       </header>

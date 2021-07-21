@@ -61,16 +61,20 @@ const Platforms = () => {
             />
           </ImageWrapper>
         </Link>
-        <Link href="/" passHref>
-          <ImageWrapper>
+        <ImageWrapper>
+          <a
+            href="https://open.spotify.com/show/3NRhPBy3BRL4SyJmD0aEzw"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Image
               src="/spotify.svg"
               layout="fill"
               objectFit="cover"
               alt="spotify"
             />
-          </ImageWrapper>
-        </Link>
+          </a>
+        </ImageWrapper>
         <Link href="/" passHref>
           <ImageWrapper>
             <Image
