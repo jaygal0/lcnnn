@@ -40,17 +40,20 @@ const Platforms = () => {
     <SectionGrid>
       <Heading>available on all major platforms</Heading>
       <LogoWrapper>
-        {/* //FIXME: Add links once the sites are up */}
-        <Link href="/" passHref>
-          <ImageWrapper>
+        <ImageWrapper>
+          <a
+            href="https://pca.st/9uslwdzr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/pocket-casts.svg"
               layout="fill"
               objectFit="cover"
               alt="pocket casts"
             />
-          </ImageWrapper>
-        </Link>
+          </a>
+        </ImageWrapper>
         <Link href="/" passHref>
           <ImageWrapper>
             <Image
@@ -75,16 +78,20 @@ const Platforms = () => {
             />
           </a>
         </ImageWrapper>
-        <Link href="/" passHref>
-          <ImageWrapper>
+        <ImageWrapper>
+          <a
+            href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82NGMzZTg1OC9wb2RjYXN0L3Jzcw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/google-podcast.svg"
               layout="fill"
               objectFit="cover"
               alt="google podcast"
             />
-          </ImageWrapper>
-        </Link>
+          </a>
+        </ImageWrapper>
         <Link href="/" passHref>
           <ImageWrapper>
             <Image

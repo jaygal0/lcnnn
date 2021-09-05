@@ -26,7 +26,7 @@ export default function Home() {
           subtitle="a podcast for people with a /now page"
           btnLabel="latest episode"
           btnPink={true}
-          link={data[0].url}
+          link={`/${data[0].url}`}
         />
         <Search />
         <ImageAndText
@@ -35,7 +35,7 @@ export default function Home() {
           body="This is still pending approval. I left this here as a reminder for me to get Derek onto the podcast."
           btnLabel="listen now"
           btnLabelNo="#?"
-          link="/derek-sivers"
+          link="/#"
           src="https://sive.rs/images/DerekSivers-20141209a-1853.jpg"
         />
         <Platforms />
